@@ -1,32 +1,32 @@
 <template>
-  <!-- <div id="app">
-    <Dashboard />
-  </div> -->
   <v-app>
     <v-main>
-      <Dashboard />
+      <v-row>
+        <v-col cols="2">
+          <Navbar />
+      </v-col>
+      <v-col cols="10">
+          <Dashboard />
+      </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
 
 export default {
   name: 'App',
-  components: {
-    Dashboard
-  }
-}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Dashboard,
+    Navbar,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
