@@ -1,6 +1,5 @@
 <template>
     <div>
-        <!-- <h1>Navbar</h1> -->
         <v-card
             height="100vh"
             width="256"
@@ -13,25 +12,10 @@
                    <v-icon large color="blue darken-2">mdi-water-circle</v-icon> 
                    BlueReceipt
                 </v-list-item-title>
-                <!-- <v-list-item-subtitle>
-                    subtext
-                </v-list-item-subtitle> -->
                  
                 </v-list-item-content>
             </v-list-item>
-
-           <!-- <div>
-               <v-text-field
-                label="Search"
-                filled
-                rounded
-                prepend-inner-icon="mdi-magnify"
-                mx-2
-                ></v-text-field>
-           </div> -->
-
             <v-divider></v-divider>
-
             <v-list
                 dense
                 nav
@@ -50,20 +34,21 @@
                 </v-list-item-content>
                 </v-list-item>
             </v-list>
+
+            <!-- NAVBAR PROFILE INFO -->
              <template v-slot:append>
                 <v-row>
                     <v-col cols="4">
-                        <v-img
-                            :src="require('../assets/avatar-svg.svg')"
-                            class="my-3"
-                            contain
-                            height="100"
-                        />
+                        <v-avatar class="mx-2" height="60" width="60">
+                           <v-img
+                             :src="require('../assets/img_avatar.png')"
+                            />
+                        </v-avatar>
                     </v-col>
                     <v-col cols="8">
-                        <div>
-                        <h4>{{userName}}</h4>
-                        <p>{{storeName}}</p>
+                        <div class="mt-2">
+                        <h4 >{{userName}}</h4>
+                        <p class="grey--text text--darken-2">{{storeName}}</p>
                         </div>
                     </v-col>
                 </v-row>
@@ -81,6 +66,7 @@ export default {
         items: [
           { title: 'Dashboard', icon: 'mdi-view-dashboard' },
           { title: 'Conversation', icon: 'mdi-message-bulleted' },
+          { title: 'Automations', icon: 'mdi-collage' },
           { title: 'Campaigns', icon: 'mdi-newspaper' },
           { title: 'Popup', icon: 'mdi-wechat' },
           { title: 'Live Chat', icon: 'mdi-chat' },
